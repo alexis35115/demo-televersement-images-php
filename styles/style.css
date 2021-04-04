@@ -30,6 +30,15 @@ body{
     text-align: center;
 }
 
+.liste-vache {
+    border: solid 1px black;
+}
+
+.espacement {
+    margin: 5px;
+    padding: 5px;
+}
+
 footer {
     text-align: center; 
     background-color: #222;
