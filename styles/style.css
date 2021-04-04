@@ -1,0 +1,43 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    text-align: center;
+    padding: 25px;
+    background-color: #222;
+    color: #eee;
+    margin-bottom: 50px;
+}
+
+body{
+    margin: 0px;
+    margin-bottom: 90px;
+}
+
+.centrer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.centrer-texte {
+    text-align: center;
+}
+
+footer {
+    text-align: center; 
+    background-color: #222;
+    padding: 25px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #eee;
+    margin-top: 60px;
+}
