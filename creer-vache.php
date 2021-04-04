@@ -15,7 +15,7 @@
     <form action="creer-vache-traitement.php" method="post" enctype="multipart/form-data">
         <div>
             <label for="nom">Nom de la vache :</label>
-            <input type="text" name="nom" id="nom"/>
+            <input type="text" name="nom"/>
         </div>
         <div>
             <label for="image-vache">Choisir une image :</label>

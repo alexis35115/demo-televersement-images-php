@@ -29,7 +29,7 @@
 
             include "connexion.php";
 
-            $sth = $dbh->prepare("INSERT INTO `vache`(`nom`, `nom_image`) VALUES (':nom', ':nom_image');");
+            $sth = $dbh->prepare("INSERT INTO `vache`(`nom`, `nom_image`) VALUES (:nom, :nom_image);");
 
             $sth->bindParam(':nom', $_POST['nom'], PDO::PARAM_STR);
             $sth->bindParam(':nom_image', $_FILES['image-vache']['name'], PDO::PARAM_STR);

@@ -17,7 +17,7 @@
     try {
         include "connexion.php";
 
-        $sth = $dbh->prepare("SELECT `nom` FROM `vache` WHERE `id_vache` = ':id_vache';");
+        $sth = $dbh->prepare("SELECT `nom` FROM `vache` WHERE `id_vache` = :id_vache;");
     
         $sth->bindParam(':id_vache', $_GET['id_vache'], PDO::PARAM_INT);
 
@@ -34,13 +34,13 @@
                 <label for="image-vache">Choisir une image :</label>
                 <input type="file" name="image-vache"/>
             </div>			
-            <input type="submit" value="Modifier la vache">
             <input type="hidden" name="id_vache" value="<?=htmlspecialchars($_GET['id_vache'])?>">
+            <input type="submit" value="Modifier la vache">
         </form>
 
     <?php
     } catch (\Throwable $e) {
-        # code...
+        echo("Erreur lors de la modification.");
     }
 
     include "pied-page.php";
