@@ -1,7 +1,5 @@
 # Démonstration du téléversement d'images en PHP
 
-Démonstration du téléversement d'images en PHP.
-
 ## Prérequis
 
 Tout d’abord, assurez-vous que PHP est configuré pour autoriser le téléchargement de fichiers.
@@ -40,7 +38,7 @@ Voici quelques règles à suivre pour le formulaire HTML de création :
 
 Autres choses à remarquer :
 
-- L’attribut type="file" du <\input> tag affiche le champ d’entrée comme un contrôle de sélection de fichiers, avec un bouton "Parcourir" à côté.
+- L’attribut type="file" du <input> tag affiche le champ d’entrée comme un contrôle de sélection de fichiers, avec un bouton "Parcourir" à côté.
 
 Le formulaire ci-dessus envoie des données à un fichier appelé "upload.php", que nous allons créer ensuite.
 
