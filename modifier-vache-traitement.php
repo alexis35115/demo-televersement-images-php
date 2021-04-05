@@ -11,29 +11,21 @@
     <?php 
     include "en-tete.php";
 
-    // On écrase la photo à toutes les fois
+    /*
+        Notez que l'on ne valide pas les données! Il FAUDRAIT le faire!
+        De plus, on ne valide pas si le fichier est d'une extension précise ou que sa taille est respectable.
+    */
 
-    //  accepter seulement X formats et la taille?
+    $dossierCible = $_SERVER['DOCUMENT_ROOT'] . "/demo-televersement-images-php/images-vache/"; 
 
-
-    $repertoireImagesVache = $_SERVER['DOCUMENT_ROOT'] . "/demo-televersement-images-php/images-vache/"; 
-
-    $destinationImage = $repertoireImagesVache . $_FILES['image-vache']['name'];
-
-    $imageSource = $_FILES['image-vache']['tmp_name'];
+    $fichierCible = $dossierCible . $_FILES['image-vache']['name'];
 
     // Essayer de téléverser l'image
-    if (move_uploaded_file($imageSource,$destinationImage)) {
+    if (move_uploaded_file($_FILES['image-vache']['tmp_name'],$fichierCible)) {
         
         // Quand le téléversement fonctionne
 
         try {
-            
-            // VALIDER LES DONNÉES?
-
-            // https://www.w3schools.com/php/php_file_upload.asp
-
-
             include "connexion.php";
 
             $sth = $dbh->prepare("UPDATE `vache` SET `nom`=:nom,`nom_image`=:nom_image WHERE `id_vache` = :id_vache");
@@ -62,7 +54,6 @@
             echo("Erreur lors de la modification de la vache.");
             echo($e->getMessage());
         }
-
     } else {
         echo("Erreur lors de la sauvegarde de l'image.");
     }

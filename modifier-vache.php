@@ -33,7 +33,7 @@
             <div>
                 <label for="image-vache">Choisir une image :</label>
                 <input type="file" name="image-vache"/>
-            </div>			
+            </div>
             <input type="hidden" name="id_vache" value="<?=htmlspecialchars($_GET['id_vache'])?>">
             <input type="submit" value="Modifier la vache">
         </form>

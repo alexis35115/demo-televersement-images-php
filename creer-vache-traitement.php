@@ -11,6 +11,11 @@
     <?php 
     include "en-tete.php";
 
+    /*
+        Notez que l'on ne valide pas les données! Il FAUDRAIT le faire!
+        De plus, on ne valide pas si le fichier est d'une extension précise ou que sa taille est respectable.
+    */
+
     $dossierCible = "images-vache/"; 
     $fichierCible = $dossierCible . basename($_FILES['image-vache']['name']);
 
@@ -18,9 +23,6 @@
     if (move_uploaded_file($_FILES['image-vache']['tmp_name'], $fichierCible)) {
         
         try {
-            
-            // Pour garder la démonstration simple, l'exemple est dénudé de validations des données!
-
             include "connexion.php";
 
             $sth = $dbh->prepare("INSERT INTO `vache`(`nom`, `nom_image`) VALUES (:nom, :nom_image);");
