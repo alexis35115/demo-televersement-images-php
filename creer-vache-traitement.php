@@ -13,7 +13,7 @@
 
     /*
         Notez que l'on ne valide pas les données! Il FAUDRAIT le faire!
-        De plus, on ne valide pas si le fichier est d'une extension précise ou que sa taille est respectable.
+        De plus, on ne vérifie pas si le fichier est d'une extension précise ou que sa taille est respectable.
     */
 
     $dossierCible = "images-vache/"; 
